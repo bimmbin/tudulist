@@ -17,7 +17,7 @@
 
                 <div class="flex py-5 border-b-2 border-gray-800">
                     <form action="post" method="">
-                        <button id="chk-btn" class="w-7 h-7 border-white border-2"><img src="/img/check.png" alt="" id="check" class="hidden absolute h-9 -translate-x-1.5 -translate-y-[1.50rem] "></button>
+                        <button id="chk-btn" class="w-7 h-7 border-white border-2"><img src="/img/check.png" alt="" id="check" class="opacity-0 absolute h-9 -translate-x-1.5 -translate-y-[1.50rem] "></button>
                     </form>
                     <p class="px-5 sm:text-xl">make it functional immediately make it functional immediately make it functional immediately make it functional immediately make it functional immediately make it functional immediately make it functional immediately</p>
                 </div>

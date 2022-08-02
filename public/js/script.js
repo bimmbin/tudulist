@@ -1,8 +1,8 @@
 
 $('#chk-btn').mouseenter(function(){
-    $('#check').toggleClass("hidden");
+    $('#check').toggleClass("opacity-0");
   });
 
   $('#chk-btn').mouseleave(function(){
-    $('#check').toggleClass("hidden");
+    $('#check').toggleClass("opacity-0");
   });
