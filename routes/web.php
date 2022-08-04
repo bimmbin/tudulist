@@ -16,8 +16,11 @@ use App\Http\Controllers\FinishedController;
 */
 
 Route::get('/tasks', [TasksController::class, 'index'])->name('tasks');
+Route::post('/tasks', [TasksController::class, 'store']);
+
 
 Route::get('/finished', [FinishedController::class, 'index'])->name('finished');
+Route::post('/finished/{id}', [FinishedController::class, 'update'])->name('task.finished');
 
 
 // Route::get('/tasks', function () {

@@ -34,8 +34,35 @@
             </main>
         </div>
 
+    
         
     </body>
 
-    <script src="/js/script.js"></script>
+
+    <script>
+
+
+    for (let index = 0; index < $('.taskCount').length; index++) {
+        
+        $('#chk-btn'+index).mouseenter(function(){
+            $('#check'+index).toggleClass("opacity-0");
+        });
+
+        $('#chk-btn'+index).mouseleave(function(){
+            $('#check'+index).toggleClass("opacity-0");
+        });
+
+
+
+    }
+
+  
+    </script>
+
+
+
+
+    {{-- <script src="/js/script.js"></script> --}}
+
+
 </html>
