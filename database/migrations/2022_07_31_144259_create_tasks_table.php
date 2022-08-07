@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->text('task');
+            $table->integer('poscount')->default('1');
             $table->text('status')->default('coding');
             $table->timestamps();
         });

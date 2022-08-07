@@ -12,7 +12,7 @@ class TasksController extends Controller
 
     public function index() {
 
-        $tasks = Tasks::where('status', 'coding')->get();
+        $tasks = Tasks::orderBy('poscount', 'DESC')->where('status', 'coding')->get();
         
         // dd($tasks->isEmpty());
         
@@ -26,11 +26,13 @@ class TasksController extends Controller
 
         $this->validate($request, [
             'task' => 'required',
+            'poscount' => 'required',
         ]);
 
     
         $request->user()->task()->create([
-            'task' => $request->task
+            'task' => $request->task,
+            'poscount' => $request->poscount
         ]);
 
         return back();

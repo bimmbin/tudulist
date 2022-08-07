@@ -12,6 +12,7 @@ class Tasks extends Model
 
     protected $fillable = [
         'task',
+        'poscount',
         'status'
     ];
 

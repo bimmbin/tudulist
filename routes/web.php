@@ -21,6 +21,7 @@ Route::post('/tasks', [TasksController::class, 'store']);
 
 Route::get('/finished', [FinishedController::class, 'index'])->name('finished');
 Route::post('/finished/{id}', [FinishedController::class, 'update'])->name('task.finished');
+Route::patch('/finished/{id}', [FinishedController::class, 'undo'])->name('task.undo');
 
 
 // Route::get('/tasks', function () {

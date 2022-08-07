@@ -52,11 +52,18 @@
             $('#check'+index).toggleClass("opacity-0");
         });
 
-
-
     }
 
-  
+    for (let index = 0; index < $('.finishedCount').length; index++) {
+        $('#unchk-btn'+index).mouseenter(function(){
+            $('#uncheck'+index).toggleClass("opacity-0");
+        });
+
+        $('#unchk-btn'+index).mouseleave(function(){
+            $('#uncheck'+index).toggleClass("opacity-0");
+        });
+    }
+
     </script>
 
 

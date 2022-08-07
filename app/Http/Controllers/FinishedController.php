@@ -13,7 +13,7 @@ class FinishedController extends Controller
 
     public function index() {
 
-        $finishedTasks = Tasks::where('status', 'finished')->paginate(5);
+        $finishedTasks = Tasks::latest()->where('status', 'finished')->paginate(5);
         
         
         return view('finished', [
@@ -27,6 +27,17 @@ class FinishedController extends Controller
         $finished = Tasks::findOrFail($id);
 
         $finished->status = 'finished';
+
+        $finished->save();
+
+        return back();
+    }
+
+    public function undo($id) {
+        
+        $finished = Tasks::findOrFail($id);
+
+        $finished->status = 'coding';
 
         $finished->save();
 
